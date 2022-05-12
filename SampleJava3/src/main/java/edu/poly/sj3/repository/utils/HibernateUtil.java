@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.poly.repository.utils;
+package edu.poly.sj3.repository.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -24,7 +24,7 @@ public class HibernateUtil {
       try {
           // Tạo đối tượng ServiceRegistry từ hibernate.cfg.xml
           ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                .configure("hibernate.cfg.xml").build();
+                .configure("META-INF/hibernate.cfg.xml").build();
 
           // Tạo nguồn siêu dữ liệu (metadata) từ ServiceRegistry
           Metadata metadata = new MetadataSources(serviceRegistry)

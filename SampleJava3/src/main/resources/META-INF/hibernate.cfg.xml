@@ -11,7 +11,7 @@
         </property>
 
         <property name="connection.url">
-            jdbc:sqlserver://localhost:1433;databaseName=SOF3011;
+            jdbc:sqlserver://localhost:1433;databaseName=SJ3;
         </property>
 
         <property name="connection.username">sa</property>
@@ -31,13 +31,8 @@
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
-
        
-        <!-- Automatically validates or exports schema DDL to the database when the SessionFactory is created -->
-        <!-- validate, create, update, create-drop -->
-        <property name="hibernate.hbm2ddl.auto">create</property>
-        
-        <mapping class="edu.poly.entity.Product" />
-
+        <mapping class="edu.poly.sj3.entity.Category" />
+        <mapping class="edu.poly.sj3.entity.Product" />
     </session-factory>
 </hibernate-configuration>

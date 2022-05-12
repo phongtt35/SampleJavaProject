@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.poly.service;
+package edu.poly.sj3.service;
 
-import edu.poly.entity.Product;
+import edu.poly.sj3.entity.Product;
 import java.util.List;
 
 /**
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface IManageProductService {
     
-    List<Product> listAllProduct();
+    List<Product> getProducts(int position, int pageSize);
     
     Product getProductById(long id);
     
@@ -22,5 +22,7 @@ public interface IManageProductService {
     
     Product updateProductById(Product product);
     
-    Product deleteProductById(long id);
+    long deleteProductById(long id);
+    
+    long countAllProducts();
 }

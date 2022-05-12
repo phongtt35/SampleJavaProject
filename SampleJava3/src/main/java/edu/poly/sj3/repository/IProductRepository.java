@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.poly.repository;
+package edu.poly.sj3.repository;
 
-import edu.poly.entity.Product;
+import edu.poly.sj3.entity.Product;
 import java.util.List;
 
 /**
@@ -14,11 +14,13 @@ import java.util.List;
  */
 public interface IProductRepository {
     
-    List<Product> findAll();
+    List<Product> findAll(int position, int pageSize);
     
     Product findById(long id);
     
     Product save(Product product);
     
-    Product delete(long id);
+    long delete(long id);
+    
+    long totalCount();
 }
